@@ -1,10 +1,6 @@
 import { NumsEnum } from './example.enum';
 
-const example: any[] = [1, 2, 3, 4, 5, true];
-
-let ex2 = example.map(element => {
-  return element +1;
-});
+type numExample = {num1: number, num2: number };
 
 function add(num1: NumsEnum, num2: NumsEnum): number {
 return num1 + num2;

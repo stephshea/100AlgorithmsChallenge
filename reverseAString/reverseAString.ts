@@ -1,3 +1,4 @@
+//completed
 function reverseAString(str: string): string {
 return str.split('').reverse().join('');
 }
