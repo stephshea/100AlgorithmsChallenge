@@ -1,13 +1,17 @@
-function alphabeticShift(inputString) {
-    
+
+function alphabeticShift(inputString) { 
     // var inputShifted = inputString.split('');
-    newString = inputString.split("");
-    for (var i = 0; i < newString.length; i++) {
-      
-       var newAb = String.fromCharCode(newString.charCodeAt(i) +1);
-var newablist= newablist.push(newAb);
+    var newWord = [];
+    inputString.split("");
+    for(var i = 0; i < inputString.length; i++){
+
+        if(inputString.charCodeAt(i) === 122){
+            newWord.push(String.fromCharCode(97));
+        }
+        else {
+            newWord.push(String.fromCharCode(inputString.charCodeAt(i) + 1));
+        }
+    }
+return newWord.join("");    
     } 
-    // return inputShifted.join('');
-    return newablist;
-}
 console.log(alphabeticShift('crazy'));
