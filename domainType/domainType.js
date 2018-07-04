@@ -1,16 +1,9 @@
 function domainType(domains) {
-  
-  let terms = {
-    "org" : "organization",
-    "com": "commercial",
-    "net" : "network",
-    "info" : "information"
-  }
 
 let domainTypes = [];
 
 for (let i = 0; i < domains.length; i++) {
-  if (domains[i].includes("org")) {
+  if (domains[i].includes ("org")) {
     domainTypes.push("organization");
     }
   if (domains[i].includes("com")) {
