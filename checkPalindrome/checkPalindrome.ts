@@ -1,5 +1,10 @@
 function checkPalindrome(inputString: string): boolean {
-
+  inputString.toLowerCase();
+  let reverse = inputString.split("").reverse().join("");
+    if(inputString === reverse){
+      return true;
+    }
+    return false;
 }
 
 console.log(checkPalindrome('aabaa'));
