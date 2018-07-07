@@ -1,4 +1,4 @@
-function commonCharacterCount(s1: string, s2: string): number {
+function commonCharacterCount(s1: string, s2: string): number); {
    
 }
 

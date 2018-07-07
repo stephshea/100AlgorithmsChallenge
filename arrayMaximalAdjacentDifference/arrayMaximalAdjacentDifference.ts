@@ -1,12 +1,11 @@
 function arrayMaximalAdjacentDifference(inputArray: number[]): number {
-    let maxDiff = Math.abs(inputArray[0] - inputArray[1]);
+    let maxDiff = 0;
 
     for (let i = 0; i < inputArray.length; i++) {
-        let absoluteDiff = Math.abs(inputArray[i - 1] - inputArray[i]);
-        maxDiff = absoluteDiff > maxDiff ? absoluteDiff : maxDiff;
+        let dif: number = Math.abs(inputArray[i] - inputArray[i + 1]);
+            maxDiff = dif > maxDiff ?  dif : maxDiff;  
     }
-
     return maxDiff;
 }
 
-console.log(arrayMaximalAdjacentDifference([2, 4, 1, 0]));
+console.log(arrayMaximalAdjacentDifference([2, 4, 9, 5]));
