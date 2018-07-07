@@ -1,8 +1,20 @@
 function alphabetSubsequence(s: string): boolean {
-  if (s.charCodeAt(1) > s.charCodeAt(0) && s.charCodeAt(2) > s.charCodeAt(1) ) {
-    return true;
+  const splitArray = s.split("");
+  const chars = [];
+  splitArray.forEach(charCode => {
+  chars.push(charCode.charCodeAt(0));
+  });
+
+  if (new Set(chars).size !== chars.length) {
+    return false;
   }
-  return false;
+
+  for (let i = 0; i < chars.length; i++) {
+    if ( chars[i] > chars[i + 1]) {
+      return false;
+     }
+  }
+  return true;
 }
 
 console.log(alphabetSubsequence('zab'))

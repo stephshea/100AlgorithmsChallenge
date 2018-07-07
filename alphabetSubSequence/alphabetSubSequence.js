@@ -1,15 +1,23 @@
 function alphabetSubsequence(s) {
-  console.log(s.split(""));
+    const splitArray = s.split("");
+    const chars = [];
+    splitArray.forEach(charCode => {
+    chars.push(charCode.charCodeAt(0));
+    });
 
-      
-  if (s.charCodeAt(1) > s.charCodeAt(0) && s.charCodeAt(2) > s.charCodeAt(1) ) {
-      return true;  
-  }   
-  return false;
+    if(new Set(chars).size !== chars.length) {
+      return false;
+    }  
+
+    for(let i = 0; i < chars.length; i++){
+      if ( chars[i] > chars[i+1]) {
+        return false;
+     }
+  }
+  return true;
 }
 console.log(alphabetSubsequence('zab'));
 console.log(alphabetSubsequence('effg'));
-console.log(alphabetSubsequence('cdce'));
 console.log(alphabetSubsequence('ace'));
+console.log(alphabetSubsequence('acefhjkla'));
 console.log(alphabetSubsequence('bxz'));
-
