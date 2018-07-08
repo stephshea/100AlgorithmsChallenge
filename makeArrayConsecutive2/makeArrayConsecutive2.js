@@ -1,11 +1,9 @@
 function makeArrayConsecutive2(statues) {
-  
   const sortedStatues = statues.sort((a, b) => a - b);
   let firstNum = sortedStatues[0];
   let lastNum = sortedStatues[sortedStatues.length-1];
   let count = 0;
-
-  for(var i = firstNum; i < lastNum; i++) {
+  for(let i = firstNum; i < lastNum; i++) {
     if(!statues.includes(i)) {
       count++;
     }
