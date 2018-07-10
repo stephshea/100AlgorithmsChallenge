@@ -5,6 +5,11 @@ total *= i;
 }
 return total;
 
+for (let i = 0; i <= num; i++) {
+total += num * (num - 1);
+}
+return total;
+
 //recursion
 if (num >= 1) {
 return num * factorializeANumber(num-1);
