@@ -1,5 +1,5 @@
 function largestNumber(n) {
-    var word = '9'.repeat(n);
-    return parseInt(word);
+    const str = "9"
+    return parseInt(str.repeat(n));
 }
 console.log(largestNumber(2));
