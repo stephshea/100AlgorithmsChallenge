@@ -7,7 +7,7 @@ function commonCharacterCount(s1: string, s2: string): number {
         }
       }
     }
-    return likes.filter(function(i, j) { 
+    return likes.filter((i, j) => {
       return likes.indexOf(i) === j;
       }).length;
     }

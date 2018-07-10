@@ -8,7 +8,7 @@ for(let i = 0; i < s1.length; i++) {
     } 
   }
  
-  return likes.filter(function(i, j) { 
+  return likes.filter((i, j) => { 
     return likes.indexOf(i) === j;
     }).length;
   // .filter(function(a,b) {
