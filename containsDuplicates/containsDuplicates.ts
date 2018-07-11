@@ -1,5 +1,5 @@
 function containsDuplicates(a: number[]): boolean {
-  return a.length !== new Set (a).size;
+  return a.length !== new Set() (a).size;
 // a = a.sort(( a, b) => a - b);
 // for (let i = 0;  i < a.length; i ++) {
 //   if ( a[i] === a[i + 1]) {
