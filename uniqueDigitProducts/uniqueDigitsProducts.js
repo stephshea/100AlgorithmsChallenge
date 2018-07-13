@@ -1,10 +1,10 @@
 function uniqueDigitProducts(a) {
  let b = a.toString().split("");
- 
+ console.log(b);
   const products = [];
   const product = 1;
   for (let i =0; i < b.length; i++) {
-    if(b[i].length === 1) {
+    if(b[i].length === 1 && typeof "number") {
       products.push(parseInt(b[i]));
     }
     else {
