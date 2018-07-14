@@ -1,5 +1,5 @@
 function htmlEndTagByStartTag(startTag: string): string {
-  return startTag.includes("<button type='button' disabled>") ? "</button" : "</i>";
+  return startTag.includes("<button") ? "</button" : "</i>";
 }
 
 console.log(htmlEndTagByStartTag("<button type='button' disabled>"));
