@@ -1,8 +1,12 @@
 function houseNumbersSum(inputArray) {
-  let total = 0;
-  for( let i = 0; i < inputArray.length; i++) {
-    if ( inputArray[i] !== 0)
-    total = inputArray[i]+=;
+  total = 0;
+  for (let i = 0; i < inputArray.length; i++) {
+    if (inputArray[i] === 0) {
+      break;
+    }
+    else {
+      total += inputArray[i]; 
+    }
   }
   return total;
 }
