@@ -1,5 +1,5 @@
 function validTime(time) {
-  time.split("");
+  let time.split("");
 for (let i = 0; i < time.length; i++){
     if (time[0] > 2 || time[1] > 3) {
       return false;
