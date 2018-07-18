@@ -1,7 +1,8 @@
 function chunkyMonkey(arr: any[], size: number): any[][] {
   const chunked = [];
-  while ( arr.length > 0) {
-    chunked.push(arr.splice(0, size));
+  let count = 0;
+  while ( count < arr.length) {
+    chunked.push(arr.slice(count, count += size));
   }
   return chunked;
 }

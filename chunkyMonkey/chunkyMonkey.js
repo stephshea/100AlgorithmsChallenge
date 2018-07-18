@@ -1,9 +1,7 @@
 function chunkyMonkey(arr, size) {
-  let chunks;
   let newArray = [];
   while ( arr.length > 0) {
-    chunks = arr.splice(0, size);
-    newArray.push(chunks);
+    newArray.push(arr.splice(0, size));
   }
   return newArray;
 }
