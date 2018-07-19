@@ -1,27 +1,21 @@
 function uniqueDigitProducts(a) {
-//  let b = a.toString().split("");
-//  console.log(b);
- 
-const products = [];
+  let numArray = [];
+  a.forEach((num) => {
+    let product = getDigitProduct(num);
+    console.log(num);
+    if ( !numArray.includes(product) ) {
+      numArray.push(product);
+    } 
+  });
+  return numArray.length;
+}
+function getDigitProduct(num) {
+  let digits = num.toString().split("");
+  let product = 1;
 
- a.forEach(num) => {
-  const product = getDigitProduct(num);
-
- });
-  
-  let wows = a[2].split("");
-
-  // for (let i =0; i < a.length; i++) {
-  //   if(a[i].length === 1 && typeof parseInt([i]) === "number") {
-  //     products.push(parseInt(a[i]));
-  //   }
-  //   else {
-      
-  //     product *= parseInt(a[i]);
-  //     if (!products.include(product)){
-  //     products.push(product);
-  //     }
-  //   }
-  return products.length;
+  digits.forEach((digit) => {
+    product *= parseInt(digit, 10);
+  });
+  return product;
 }
 console.log(uniqueDigitProducts([2, 8, 121, 42, 222, 23]));
