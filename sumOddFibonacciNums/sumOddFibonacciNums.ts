@@ -7,7 +7,7 @@ function sumOddFibonacciNums(num: number): number {
     if (current % 2 !== 0) {
     total += current;
     }
-    next = previous + current;
+    next = current + previous;
     previous = current;
     current = next;
   }
