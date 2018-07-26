@@ -1,5 +1,17 @@
 function sumOddFibonacciNums(num: number): number {
-
+  let total = 0;
+  let current = 1;
+  let next = 0;
+  let  previous = 0;
+  while (current < num) {
+    if (current % 2 !== 0) {
+    total += current;
+    }
+    next = previous + current;
+    previous = current;
+    current = next;
+  }
+  return total;
 }
 
 console.log(sumOddFibonacciNums(1000));
