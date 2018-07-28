@@ -11,9 +11,6 @@ function firstDigit(inputString) {
     if (typeof(parseInt(splitted[i])) === "number") {
       return parseInt(splitted[i]);  
     }
-    else {
-      return "yay";
-    } 
   }
 }
 console.log(firstDigit('var_1__Int'));
