@@ -1,13 +1,10 @@
 function depositProfit(deposit: number, rate: number, threshold: number): number {
-    let year = 0;
-    let account = deposit;
-
-    while(threshold > account) {
-        account += account * (rate / 100);
-        year++;
-    } 
-
-    return year;
+    let years = 0;
+    let balance = deposit;
+    while (balance < threshold) {
+        balance += balance * (rate / 100);
+        years++;
+    }
+    return years;
 }
-
-console.log(depositProfit(100, 20, 170))
+console.log(depositProfit(100, 20, 170));
