@@ -1,14 +1,14 @@
 function differentSymbolsNaive(s) {
-  // s = s.split("");
-  charArray = [];
+  s = s.split("&");
+  console.log(s);
+  let chars = [];
 
-  for(let i = 0; i < s.length; i++) {
-    if(s.charCodeAt(i) >=65 && s.charCodeAt(i)<= 122 )
-    {
-      charArray.push(i);
-    }
+
+  {
+    chars.push();
   }
-  return charArray;
+
+  return chars.length;
 }
 console.log(differentSymbolsNaive('cabca'));
 console.log(differentSymbolsNaive('&quot;cabca&quot'));
