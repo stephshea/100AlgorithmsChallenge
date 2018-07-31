@@ -2,7 +2,10 @@ function digitDegree(n) {
   let numbers = n.toString().split("");
   let digitDegree = 0;
   for (let i = 0; i < numbers.length; i++) {
-     += parseInt(numbers[i]);
+     if ( numbers[i].length === 0) {
+       return 0;
+     }
+     
   }
   return digitDegree
 }
