@@ -17,9 +17,8 @@ function commonCharacterCount(s1, s2) {
     for (let i =0; i < s2.length; i++) {
         if(s2Obj.hasOwnProperty(s2[i]) === false) {
             s2Obj[s2[i]] = 1;
-        }
-        else {
-            s2Obj[s2[i]]++;
+        } else {
+          s2Obj[s2[i]]++;
         }
     }
   
@@ -28,8 +27,7 @@ function commonCharacterCount(s1, s2) {
       if (s2Obj.hasOwnProperty(prop) === true) {
         if (s2Obj[prop] < s1Obj[prop]){
           total += s2Obj[prop];
-        }
-        else {
+        } else {
           total += s1Obj[prop];
         }
       }

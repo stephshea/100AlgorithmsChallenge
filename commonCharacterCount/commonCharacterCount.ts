@@ -1,40 +1,31 @@
 function commonCharacterCount(s1: string, s2: string): number {
-  s1 = s1.split("");
-  s2 = s2.split("");
-  
-  const s1Obj = {};
-  const s2Obj = {};
-  
-  for (let i =0; i < s1.length; i++) {
-      if (s1Obj.hasOwnProperty(s1[i]) === false) {
-          s1Obj[s1[i]] = 1;
-      }
-      else {
-          s1Obj[s1[i]]++;
-      }
-  }
-  
-  for (let i =0; i < s2.length; i++) {
-      if(s2Obj.hasOwnProperty(s2[i]) === false) {
-          s2Obj[s2[i]] = 1;
-      }
-      else {
-          s2Obj[s2[i]]++;
-      }
-  }
-
+  const s1Chars: string[] = s1.split("");
+  const s2Chars: string [] = s2.split("");
+  const s1CharCount = getCharList(s1Chars);
+  const s2CharCount = getCharList(s2Chars);
   let total = 0;
-  for (const prop in s1Obj){
-    if (s2Obj.hasOwnProperty(prop) === true) {
-      if (s2Obj[prop] < s1Obj[prop]){
-        total += s2Obj[prop];
-      }
-      else {
-        total += s1Obj[prop];
+  for (const prop in s1CharCount) {
+    if (s2CharCount.hasOwnProperty(prop) === true) {
+      if (s2CharCount[prop] < s1CharCount[prop]) {
+        total += s2CharCount[prop];
+      } else {
+        total += s1CharCount[prop];
       }
     }
   }
   return total;
 }
+function getCharList(chars: string[]): object {
+  const wordCount = {};
+  for (let i =0; i < chars.length; i++) {
+    if (wordCount.hasOwnProperty(chars[i])) {
+      wordCount[chars[i]]++;
+    } else {
+        wordCount[chars[i]] = 1;
+    }
+  }
+  return wordCount;
+}
+
 console.log(commonCharacterCount('aabcc', 'adcaa'));
 console.log(commonCharacterCount('zzzz', 'zzzzzz'));
