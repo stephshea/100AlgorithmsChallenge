@@ -1,15 +1,10 @@
 function firstDigit(inputString) {
-  // inputString.split("").map((num) => {
-  //   if (typeof num === 'number') {
-  //     return num;  
-  //   }
-  // });
-
-  let splitted = inputString.split("");
-  console.log(splitted[0]);
+  const digits = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+  const splitted = inputString.split("");
+  
   for (let i = 0; i < splitted.length; i++) {
-    if (typeof(parseInt(splitted[i])) === "number") {
-      return parseInt(splitted[i]);  
+    if(digits.includes(splitted[i])) {
+      return splitted[i];
     }
   }
 }
