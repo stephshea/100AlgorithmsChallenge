@@ -1,3 +1,4 @@
+
 function centuryFromYear(year) {
     let century = year/100;
     if(Number.isInteger(century)){

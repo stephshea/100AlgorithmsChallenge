@@ -1,5 +1,5 @@
 function isLucky(n) {
-  n = n.toString().split('');
+  n = n.toString().split("");
   let divide = n.length / 2;
   let left = n.splice(0, divide);
   let right = n.slice(0, divide);
