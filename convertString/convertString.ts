@@ -4,7 +4,7 @@ function convertString(s: any, t: string): boolean {
   let tIndex = 0;
   for (letter of s) {
       if (letter === t[tIndex]) {
-        letters = letters.concat(letter);
+        letters += letter;
         tIndex++;
 
         if (letters === t) {
