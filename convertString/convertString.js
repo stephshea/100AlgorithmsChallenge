@@ -1,15 +1,18 @@
 function convertString(s, t) {
-  s = s.split("");
-  t = t.split("");
- for(let i = 0; i <s.length; i++) {
-   for (let j = 0; j < t.length; j++)
-   {
-    if(s[i].includes(t[j])) {
-      return true; 
+  let letters = '';
+  let tIndex = 0;
+
+  for(let i = 0; i <s.length; i++) {
+      if(s[i] === t[tIndex]) {
+        letters = letters.concat(s[i]);
+        tIndex++;
+
+        if (letters === t) {
+          return true;
+        }
+      }
     }
-  }
-return false;
-}
+  return false;
 }
 console.log(convertString('ceoydefthf5iyg5h5yts', 'codefights'));
 console.log(convertString('addbyca', 'abcex'));
