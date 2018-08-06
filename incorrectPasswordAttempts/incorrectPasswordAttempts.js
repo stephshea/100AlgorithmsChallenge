@@ -1,10 +1,10 @@
 function incorrectPasscodeAttempts(passcode, attempts) {
-    var failedAttempts = 0;
-    for (var _i = 0, attempts_1 = attempts; _i < attempts_1.length; _i++) {
-        var attempt = attempts_1[_i];
-        failedAttempts = attempt === passcode ? 0 : failedAttempts++;
-        if (failedAttempts === 10) {
-            return true;
+    let failedAttempts = 0;
+    for (let attempt of attempts) {
+       failedAttempts = attempt === passcode ? failedAttempts = 0 : failedAttempts++;
+             
+        if (failedAttempts === 10){
+            return true; 
         }
     }
     return false;

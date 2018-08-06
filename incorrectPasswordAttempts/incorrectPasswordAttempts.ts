@@ -1,14 +1,11 @@
 function incorrectPasscodeAttempts(passcode: string, attempts: string[]): boolean {
     let failedAttempts = 0;
-
     for (let attempt of attempts) {
-        failedAttempts = attempt === passcode ? 0 : failedAttempts++;
-
-        if (failedAttempts === 10) {
-            return true;
+            failedAttempts = attempt === passcode ? failedAttempts = 0 : failedAttempts++;
+            if (failedAttempts === 10) {
+                return true;
         }
     }
-
     return false;
 }
 
