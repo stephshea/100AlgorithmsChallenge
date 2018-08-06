@@ -1,5 +1,5 @@
 function houseOfCats(legs: number): number[] {
-  const critters = [];
+  const critters: [] = [];
   while (legs >= 0) {
     critters.unshift(legs / 2);
     legs -= 4;
