@@ -7,13 +7,16 @@ function arrayConversion(inputArray) {
     pairs.push(num);
     i++;
   }
+  console.log(pairs);
+
   for (let j = 0; j < pairs.length; j++) {
     let num2 = pairs[j] * pairs[j + 1];
     multpairs.push(num2);
     j++;
   }
+  console.log(multpairs);
   return multpairs.reduce((a, b) => {
     return a + b;
   });
 }
-console.log(arrayConversion([1, 2, 3, 4, 5, 6, 7, 8]));
+console.log(arrayConversion([1, 2, 3, 4, 5, 6, 7, 8, 9, 2, 6, 7]));
