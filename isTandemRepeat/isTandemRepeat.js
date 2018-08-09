@@ -1,4 +1,5 @@
 function isTandemRepeat(inputString) {
+  
 }
 console.log(isTandemRepeat('tandemtandem'));
 console.log(isTandemRepeat('qqq'));
