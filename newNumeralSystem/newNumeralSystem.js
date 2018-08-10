@@ -1,10 +1,12 @@
 function newNumeralSystem(number) {
-  let num;
   let nums = [];
-  for (let i = 0; i < 6; i++) {
- num = 6 - i;
- nums.push(num);
+  let startCharCount = 65;
+  let endCharCount = number.charCodeAt(0);
+  while (startCharCount <= endCharCount) {
+    nums.push(String.fromCharCode(startCharCount) + "+"  + String.fromCharCode(endCharCount));
+    startCharCount++;
+    endCharCount--;
   }
-return nums;
+  return nums;
 }
 console.log(newNumeralSystem('G'));
